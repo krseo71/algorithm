@@ -3,8 +3,18 @@
 # 그리고 위 과정에서 거쳐간 모든 수를 기록한 수열을 콜라츠 수열이라고 부릅니다.
 # 계산 결과 1,000 보다 작거나 같은 수에 대해서는 전부 언젠가 1에 도달한다는 것이 알려져 있습니다.
 # 임의의 1,000 보다 작거나 같은 양의 정수 n이 주어질 때 초기값이 n인 콜라츠 수열을 return 하는 solution 함수를 완성해 주세요.
+
 def solution(n):
-    answer = []
+    answer = [n]
+
+    while n > 1:
+        if n % 2 == 0:
+            answer.append(n // 2)
+            n /= 2
+        elif n % 2 == 1:
+            answer.append(3 * n + 1)
+            n = 3 * n + 1
+
     return answer
 
 print(solution(10))
