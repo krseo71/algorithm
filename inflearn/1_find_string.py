@@ -11,22 +11,16 @@
 
 
 
-def solution():
-    input1, input2 = map(str, input().split())
+def find_string(input1, input2):
     cnt = 0
     for i in input1.lower():
         if i == input2.lower():
             cnt += 1
     return cnt
 
-solution()
+input1, input2 = map(str, input().strip().split())
+print(find_string(input1, input2))
 
-
-# def main():
-#     input1, input2 = map(str, input().split())
-#     print(solution(input1, input2))
-
-# main()
 
 
 
